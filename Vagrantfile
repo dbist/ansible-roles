@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "centos/7"
+  config.vm.box_version = "1905.01"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -46,13 +47,13 @@ Vagrant.configure("2") do |config|
 
   # vbguest options https://github.com/dotless-de/vagrant-vbguest
   # turn off vbox guest additions install
-  config.vbguest.no_install = false # if true, turn off synced_folder as it will fail otherwise
+  config.vbguest.no_install = true # if true, turn off synced_folder as it will fail otherwise
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "~/Downloads", "/vagrant_data", type: "virtualbox", SharedFoldersEnableSymlinksCreate: false
+  #config.vm.synced_folder "~/Downloads", "/vagrant_data", type: "virtualbox", SharedFoldersEnableSymlinksCreate: false
 
   config.vm.provider "virtualbox" do |vb|
      vb.memory = "8192"
