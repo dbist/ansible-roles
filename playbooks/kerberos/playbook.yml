@@ -14,6 +14,11 @@
     - name: Update yum cache if needed.
       yum: update_cache=false
 
+    - name: Install prerequisites
+      yum:
+        name: ntp
+        state: latest
+
   handlers:
 #    - import_tasks: handlers/handlers.yml
     # Handler showing how to clean yum metadata cache
