@@ -1,0 +1,5 @@
+---
+# Variables file 'vars.yml' for aervits.kerberos-server playbook
+
+kerberos-server-hostname:
+  - krb.example.com
