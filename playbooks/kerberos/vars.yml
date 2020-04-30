@@ -3,3 +3,7 @@
 
 kerberos-server-hostname:
   - krb.example.com
+
+packages:
+  - wget
+  - ntp

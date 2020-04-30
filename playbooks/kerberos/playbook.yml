@@ -11,13 +11,14 @@
     - vars.yml
 
   pre_tasks:
-    - name: Update yum cache if needed.
-      yum: update_cache=false
+#    - name: Update yum cache if needed.
+#      yum: update_cache=false
 
     - name: Install prerequisites
-      yum:
-        name: ntp
+      package:
+        name: "{{ item }}"
         state: latest
+      with_items: "{{ packages }}"
 
   handlers:
 #    - import_tasks: handlers/handlers.yml
