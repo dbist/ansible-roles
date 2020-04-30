@@ -24,4 +24,8 @@ roles can be imported from multiple sources, as per Chapter 6, Ansible for DevOp
 
 To install the roles defined in a requirements file, use the command `ansible-galaxy install -r requirements.yml. For more documentation on Ansible requirements files, see the official documentation: [Installing Multiple Roles From a File](https://galaxy.ansible.com/docs/using/installing.html#installing-multiple-roles-from-a-file).
 
-ansible -i inventory.yml dev -a "hostname"
+`ansible -i inventory.yml dev -a "hostname"`
+
+TODO:
+1. the Vagrant machine is provisioned with time not synchronized, update the role to keep time up to date
+
