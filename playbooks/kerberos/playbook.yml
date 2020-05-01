@@ -14,7 +14,7 @@
 #    - name: Update yum cache if needed.
 #      yum: update_cache=false
 
-  - name: Install prerequisites
+  - name: install convenience packages (optional)
     package:
       name: "{{ item }}"
       state: latest
