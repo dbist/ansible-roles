@@ -40,3 +40,6 @@ To install the roles defined in a requirements file, use the command `ansible-ga
 TODO:
 1. the Vagrant machine is provisioned with time not synchronized, update the role to keep time up to date.
 
+
+GITHUB ACTION:
+1. this repo is powered by github action for `ansible-lint`, [link](https://github.com/marketplace/actions/ansible-lint).
