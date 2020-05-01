@@ -19,7 +19,7 @@ jobs:
    - uses: ansible/ansible-lint-action@v4.1.0.post0
 
    - name: Lint Ansible Playbook
-   - uses: ansible/ansible-lint-action@master
+   uses: ansible/ansible-lint-action@master
    with:
       roles/aervits.kerberos-server/tasks
       roles/aervits.kerberos-server/defaults
