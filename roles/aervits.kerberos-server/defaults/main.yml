@@ -12,3 +12,5 @@ kerberos_packages:
   - krb5-server
   - krb5-libs
   - krb5-workstation
+
+timezone: America/New_York

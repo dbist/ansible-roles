@@ -10,7 +10,7 @@ ansible-lint                           4.2.0
 `pip install ansible ansible-lint`
 
 Run `ansible-lint` manually
-` ansible-lint roles/aervits.kerberos-server`
+`ansible-lint roles/aervits.kerberos-server`
 
 roles can be imported from multiple sources, as per Chapter 6, Ansible for DevOps, page 129
 
@@ -43,3 +43,17 @@ TODO:
 
 GITHUB ACTION:
 1. this repo is powered by github action for `ansible-lint`, [link](https://github.com/marketplace/actions/ansible-lint).
+
+----------------
+`vagrant ssh-config`
+
+Host default
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/artem/Documents/ansible-roles/.vagrant/machines/default/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
