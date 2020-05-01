@@ -21,7 +21,8 @@ jobs:
     - name: Lint Ansible Playbook
       uses: ansible/ansible-lint-action@master
       with:
-        roles/aervits.kerberos-server/tasks
+        playbook.yml
+        aervits.kerberos-server/tasks
         roles/aervits.kerberos-server/defaults
         roles/aervits.kerberos-server/handlers
         roles/aervits.kerberos-server/meta
