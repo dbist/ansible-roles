@@ -1,6 +1,14 @@
 # ansible-roles
 miscellaneous ansible roles
 
+PREREQUISITES:
+```
+ansible                                2.9.7
+ansible-lint                           4.2.0
+```
+
+`pip install ansible ansible-lint`
+
 roles can be imported from multiple sources, as per Chapter 6, Ansible for DevOps, page 129
 
 ```yml

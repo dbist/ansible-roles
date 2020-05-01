@@ -4,10 +4,10 @@
   - name: install kerberos prerequisites
     package:
       name: "{{ item }}"
-      state: latest
+      state: present
     with_items: "{{ prerequisite_packages }}"
 
-  - name: ensure ntp is enabled and running 
+  - name: ensure ntp is enabled and running
     service:
       name: ntpd
       state: started
