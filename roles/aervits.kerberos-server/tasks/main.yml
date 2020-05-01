@@ -4,7 +4,7 @@
 #- debug:
 #    msg: debugging tasks
 
-- name: kerberos requires ntp installed 
+- name: kerberos requires ntp installed
   include: ntp.yml
 
 - name: starting kerberos provisioning
