@@ -18,7 +18,7 @@ jobs:
     # Important: This sets up your GITHUB_WORKSPACE environment variable
   - uses: ansible/ansible-lint-action@v4.1.0.post0
 
-  name: Lint Ansible Playbook
+  - name: Lint Ansible Playbook
   - uses: ansible/ansible-lint-action@master
     with:
       roles/aervits.kerberos-server/tasks
