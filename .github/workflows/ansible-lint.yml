@@ -23,6 +23,8 @@ jobs:
       uses: ansible/ansible-lint-action@v4.1.0.post0
       with:
         targets: |
+          roles/aervits.kerberos-server
+          playbooks/kerberos
           playbooks/kerberos/playbook.yml
           playbooks/kerberos/vars.yml
           roles/aervits.kerberos-server/tasks
