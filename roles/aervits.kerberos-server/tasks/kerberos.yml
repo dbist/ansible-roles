@@ -4,7 +4,7 @@
   - name: install kerberos packages
     package:
       name: "{{ item }}"
-      state: latest
+      state: present
     with_items: krb5-server, krb5-libs, krb5-workstation
 
   - name: replace the default krb5 template with own
@@ -13,7 +13,9 @@
       dest: "/etc/krb5.conf"
 
   - name: create the initial kerberos database
-    shell: echo -e "{{ master_db_pass }}\n{{ master_db_pass }}" | kdb5_util create -s; touch /var/kerberos/db_created creates=/var/kerberos/db_created
+    shell: |
+      set -o pipefail
+      echo -e "{{ master_db_pass }}\n{{ master_db_pass }}" | kdb5_util create -s; touch /var/kerberos/db_created creates=/var/kerberos/db_created
 
   - name: start kdc server
     service:
@@ -28,7 +30,10 @@
       enabled: yes
 
   - name: add admin principal
-    shell: echo -e "{{ admin_principal_password }}\n{{ admin_principal_password }}" | kadmin.local -q "addprinc admin/admin"
+    shell: |
+      set -o pipefail
+      echo -e "{{ admin_principal_password }}\n{{ admin_principal_password }}" | kadmin.local -q "addprinc admin/admin"
+    changed_when: false
 
   - name: replace the default kadm5 template with own
     template:
