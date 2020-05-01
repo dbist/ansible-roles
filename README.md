@@ -9,6 +9,9 @@ ansible-lint                           4.2.0
 
 `pip install ansible ansible-lint`
 
+Run `ansible-lint` manually
+` ansible-lint roles/aervits.kerberos-server`
+
 roles can be imported from multiple sources, as per Chapter 6, Ansible for DevOps, page 129
 
 ```yml
