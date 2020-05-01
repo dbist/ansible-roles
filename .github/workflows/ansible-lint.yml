@@ -12,15 +12,15 @@ on:
 jobs:
   build:
 
-runs-on: centos-latest
+   runs-on: centos-latest
 
-steps:
+   steps:
    # Important: This sets up your GITHUB_WORKSPACE environment variable
    - uses: ansible/ansible-lint-action@v4.1.0.post0
 
    - name: Lint Ansible Playbook
    - uses: ansible/ansible-lint-action@master
-     with:
+   with:
       roles/aervits.kerberos-server/tasks
       roles/aervits.kerberos-server/defaults
       roles/aervits.kerberos-server/handlers
@@ -28,8 +28,8 @@ steps:
       roles/aervits.kerberos-server/templates
       roles/aervits.kerberos-server/vars
       roles/aervits.kerberos-server/tests
-     override-deps: |
+   override-deps: |
         ansible==2.9
          ansible-lint==4.2.0
-     args: ""
+   args: ""
 
