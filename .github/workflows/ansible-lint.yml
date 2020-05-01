@@ -16,10 +16,11 @@ jobs:
 
     steps:
 #    - uses: actions/checkout@v2
-    - uses: ansible/ansible-lint-action@v4.1.0.post0
+#    - uses: ansible/ansible-lint-action@v4.1.0.post0
 
     - name: Lint Ansible Playbook
-      uses: ansible/ansible-lint-action@master
+#      uses: ansible/ansible-lint-action@master
+      uses: ansible/ansible-lint-action@v4.1.0.post0
       with:
         targets: |
           playbooks/kerberos/playbook.yml
