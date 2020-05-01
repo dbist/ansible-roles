@@ -6,4 +6,3 @@ kerberos-server-hostname:
 
 packages:
   - wget
-  - ntp
