@@ -38,5 +38,5 @@ To install the roles defined in a requirements file, use the command `ansible-ga
 `ansible -i inventory.yml dev -a "hostname"`
 
 TODO:
-1. the Vagrant machine is provisioned with time not synchronized, update the role to keep time up to date
+1. the Vagrant machine is provisioned with time not synchronized, update the role to keep time up to date.
 
