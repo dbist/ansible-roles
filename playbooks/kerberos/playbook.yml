@@ -1,6 +1,6 @@
---- 
+---
 - hosts: all
-  become: yes 
+  become: yes
   roles:
     - ../../roles/aervits.kerberos-server
 #  - src: https://github.com/dbist/ansible-roles/roles/aervits.kerberos-server
@@ -17,7 +17,7 @@
   - name: install convenience packages (optional)
     package:
       name: "{{ item }}"
-      state: latest
+      state: present
     with_items: "{{ packages }}"
 
   handlers:
