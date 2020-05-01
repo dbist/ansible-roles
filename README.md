@@ -1,7 +1,16 @@
 # ansible-roles
 miscellaneous ansible roles
 
-PREREQUISITES:
+Prerequisites:
+
+```
+vagrant-hostmanager (1.8.9, global)
+vagrant-persistent-storage (0.0.48, global)
+vagrant-scp (0.5.7, global)
+vagrant-vbguest (0.21.0, global)
+```
+
+Tested with the following:
 ```
 ansible                                2.9.7
 ansible-lint                           4.2.0
