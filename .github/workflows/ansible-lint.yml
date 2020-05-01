@@ -19,17 +19,17 @@ jobs:
    - uses: ansible/ansible-lint-action@v4.1.0.post0
 
    - name: Lint Ansible Playbook
-   uses: ansible/ansible-lint-action@master
-   with:
-      roles/aervits.kerberos-server/tasks
-      roles/aervits.kerberos-server/defaults
-      roles/aervits.kerberos-server/handlers
-      roles/aervits.kerberos-server/meta
-      roles/aervits.kerberos-server/templates
-      roles/aervits.kerberos-server/vars
-      roles/aervits.kerberos-server/tests
-   override-deps: |
+   - uses: ansible/ansible-lint-action@master
+     with:
+        roles/aervits.kerberos-server/tasks
+        roles/aervits.kerberos-server/defaults
+        roles/aervits.kerberos-server/handlers
+        roles/aervits.kerberos-server/meta
+        roles/aervits.kerberos-server/templates
+        roles/aervits.kerberos-server/vars
+        roles/aervits.kerberos-server/tests
+     override-deps: |
         ansible==2.9
         ansible-lint==4.2.0
-   args: ""
+     args: ""
 
