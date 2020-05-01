@@ -1,27 +1,26 @@
 # Ansible Lint Action
-- name: ansible-lint
-  uses: ansible/ansible-lint-action@v4.1.0.post0
+name: ansible-lint
 
-  on:
-    push:
-    branches:
-    - master
-  pull_request:
-    branches:
-    - master
+on:
+  push:
+  branches:
+  - master
+pull_request:
+  branches:
+  - master
 
-  jobs:
-    build:
+jobs:
+  build:
 
-    runs-on: centos-latest
+  runs-on: centos-latest
 
-    steps:
+  steps:
     # Important: This sets up your GITHUB_WORKSPACE environment variable
-    - uses: actions/checkout@v2
+  - uses: ansible/ansible-lint-action@v4.1.0.post0
 
-    - name: Lint Ansible Playbook
+  - name: Lint Ansible Playbook
       # replace "master" with any valid ref
-      uses: ansible/ansible-lint-action@master
+    uses: ansible/ansible-lint-action@master
       with:
         # [required]
         # Paths to ansible files (i.e., playbooks, tasks, handlers etc..)
