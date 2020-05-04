@@ -24,17 +24,17 @@ Run `ansible-lint` manually
 roles can be imported from multiple sources, as per Chapter 6, Ansible for DevOps, page 129
 
 ```yml
---- 
-# From Ansible Galaxy, latest version. 
+---
+# From Ansible Galaxy, latest version.
 - src: geerlingguy.firewall
 
-# From Ansible Galaxy, specifying the version. 
-- src: geerlingguy.php 
+# From Ansible Galaxy, specifying the version.
+- src: geerlingguy.php
   version: 3.5.1
 
-# From GitHub, with a custom name and version. 
-- src: https://github.com/geerlingguy/ansible-role-passenger 
-  name: passenger 
+# From GitHub, with a custom name and version.
+- src: https://github.com/geerlingguy/ansible-role-passenger
+  name: passenger
   version: 1.2.0
 
 # From a web server, with a custom name.

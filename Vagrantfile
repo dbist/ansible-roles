@@ -82,5 +82,5 @@ Vagrant.configure("2") do |config|
      ansible.playbook = "playbooks/kerberos/playbook.yml"
     # enable for debugging
     # ansible.verbose = "vvv"
-  end 
+  end
 end
