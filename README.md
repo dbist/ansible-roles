@@ -4,6 +4,7 @@ miscellaneous ansible roles
 Prerequisites:
 
 ```
+pre-commit
 vagrant-hostmanager (1.8.9, global)
 vagrant-persistent-storage (0.0.48, global)
 vagrant-scp (0.5.7, global)
