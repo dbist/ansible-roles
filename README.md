@@ -1,3 +1,5 @@
+![ansible-lint](https://github.com/dbist/ansible-roles/workflows/ansible-lint/badge.svg?branch=master)
+
 # ansible-roles
 miscellaneous ansible roles
 
