@@ -21,18 +21,18 @@ jobs:
       uses: ansible/ansible-lint-action@master
 #      uses: ansible/ansible-lint-action@v4.3.0a0
       with:
-        targets: |
-          roles/aervits.kerberos-server
-          playbooks/kerberos
-          playbooks/kerberos/playbook.yml
-          playbooks/kerberos/vars.yml
-          roles/aervits.kerberos-server/tasks
-          roles/aervits.kerberos-server/defaults
-          roles/aervits.kerberos-server/handlers
-          roles/aervits.kerberos-server/meta
-          roles/aervits.kerberos-server/templates
-          roles/aervits.kerberos-server/vars
-          roles/aervits.kerberos-server/tests
+#        targets: |
+#          roles/aervits.kerberos-server
+#          playbooks/kerberos
+#          playbooks/kerberos/playbook.yml
+#          playbooks/kerberos/vars.yml
+#          roles/aervits.kerberos-server/tasks
+#          roles/aervits.kerberos-server/defaults
+#          roles/aervits.kerberos-server/handlers
+#          roles/aervits.kerberos-server/meta
+#          roles/aervits.kerberos-server/templates
+#          roles/aervits.kerberos-server/vars
+#          roles/aervits.kerberos-server/tests
         # [required]
         # Paths to ansible files (i.e., playbooks, tasks, handlers etc..)
         # or valid Ansible directories according to the Ansible role
@@ -41,7 +41,7 @@ jobs:
         # targets: |
         #   playbook_1.yml
         #   playbook_2.yml
-        #targets: ""
+        targets: "./"
         # [optional]
         # Arguments to override a package and its version to be set explicitly.
         # Must follow the example syntax.
@@ -70,4 +70,4 @@ jobs:
         #                         path to directories or files to skip. This option is
         #                         repeatable.
         #   -c C                  Specify configuration file to use. Defaults to ".ansible-lint"
-        #args: ""
+        args: "-q"
