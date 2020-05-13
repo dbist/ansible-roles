@@ -3,6 +3,7 @@
   become: yes
   roles:
     - ../../roles/aervits.kerberos-server
+    - ../../roles/aervits.jdk
 #  - src: https://github.com/dbist/ansible-roles/roles/aervits.kerberos-server
 #    name: aervits.kerberos-server
 #  version: 1.2.0

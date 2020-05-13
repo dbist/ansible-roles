@@ -2,6 +2,12 @@
 
 # ansible-roles
 miscellaneous ansible roles
+install with `ansible-galaxy role install -r requirements.yml`
+```
+- aervits.kerberos-server (master) is already installed, skipping.
+- extracting aervits.jdk to /Users/artem/.ansible/roles/aervits.jdk
+- aervits.jdk (master) was installed successfully
+
 
 Prerequisites:
 

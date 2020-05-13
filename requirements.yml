@@ -1,0 +1,7 @@
+- name: aervits.kerberos-server
+  src: https://github.com/dbist/ansible-roles
+  version: master
+
+- name: aervits.jdk
+  src: https://github.com/dbist/ansible-roles
+  version: master
