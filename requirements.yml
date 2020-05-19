@@ -5,3 +5,7 @@
 - name: aervits.jdk
   src: https://github.com/dbist/ansible-roles
   version: master
+
+- name: aervits.devtools
+  src: https://github.com/dbist/ansible-roles
+  version: master
