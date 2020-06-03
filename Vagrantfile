@@ -28,8 +28,8 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "private_network", ip: "192.168.33.10"
-  config.vm.hostname = "krb.example.com"
+  config.vm.network "private_network", ip: "192.168.33.10", name: "vboxnet0"#, :adapter => 2
+  config.vm.hostname = "node.example.com"
   config.hostmanager.enabled = true
   config.hostmanager.manage_host = true
   config.hostmanager.manage_guest = true
@@ -53,7 +53,7 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  #config.vm.synced_folder "~/Downloads", "/vagrant_data", type: "virtualbox", SharedFoldersEnableSymlinksCreate: false
+  # config.vm.synced_folder "~/Downloads", "/vagrant_data", type: "virtualbox", SharedFoldersEnableSymlinksCreate: false
 
   config.vm.provider "virtualbox" do |vb|
      vb.memory = "8192"
@@ -79,7 +79,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "ansible" do |ansible|
      ansible.compatibility_mode = "2.0"
-     ansible.playbook = "playbooks/kerberos/playbook.yml"
+     ansible.playbook = "playbooks/activedirectory/playbook.yml"
     # enable for debugging
     # ansible.verbose = "vvv"
   end

@@ -1,0 +1,42 @@
+---
+- hosts: all
+  become: yes
+  roles:
+# TODO: convert to requirements
+    - ../../roles/aervits.jdk
+    - ../../roles/aervits.devtools
+
+#  - src: https://github.com/dbist/ansible-roles/roles/aervits.kerberos-server
+#    name: aervits.kerberos-server
+#  version: 1.2.0
+
+  vars_files:
+    - vars.yml
+
+  pre_tasks:
+#    - name: Update yum cache if needed.
+#      yum: update_cache=false
+
+  - name: install convenience packages (optional)
+    package:
+      name: "{{ item }}"
+      state: present
+    with_items: "{{ packages }}"
+
+  handlers:
+#    - import_tasks: handlers/handlers.yml
+    # Handler showing how to clean yum metadata cache
+  - name: yum-clean-metadata
+    command: yum clean metadata
+    args:
+      warn: no
+
+   # Example removing a repository and cleaning up metadata cache
+  - name: Remove repository (and clean up left-over metadata)
+    yum_repository:
+      name: 7.7.1908-base
+      state: absent
+    notify: yum-clean-metadata
+
+#  tasks:
+#   - import_tasks: roles/aervits.kerberos-server/tasks/main.yml
