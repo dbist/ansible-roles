@@ -1,0 +1,14 @@
+---
+# tasks file for aervits.kerberos-client
+
+  - name: install kerberos prerequisites
+    package:
+      name: "{{ item }}"
+      state: present
+    with_items: "{{ prerequisite_packages }}"
+
+  - name: ensure ntp is enabled and running
+    service:
+      name: ntpd
+      state: started
+      enabled: yes

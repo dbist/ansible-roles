@@ -1,0 +1,12 @@
+---
+# defaults file for aervits.kerberos-client
+kerberos_server_hostname: krb.example.com
+realm: EXAMPLE.COM
+
+prerequisite_packages:
+  - ntp
+
+kerberos_packages:
+  - krb5-workstation
+
+timezone: America/New_York

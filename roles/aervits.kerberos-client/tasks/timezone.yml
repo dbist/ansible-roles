@@ -1,0 +1,10 @@
+---
+# tasks file for aervits.kerberos-client
+
+#- debug:
+#    var: timezone
+#    verbosity: 2
+
+- name: set timezone
+  timezone:
+    name: "{{ timezone }}"

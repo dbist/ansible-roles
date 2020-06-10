@@ -1,0 +1,13 @@
+---
+# tasks file for aervits.kerberos-client
+
+  - name: install kerberos packages
+    package:
+      name: "{{ item }}"
+      state: present
+    with_items: "{{ kerberos_packages }}"
+
+  - name: replace the default krb5 template with own
+    template:
+      src: templates/krb5.conf
+      dest: "/etc/krb5.conf"

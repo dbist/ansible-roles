@@ -1,0 +1,14 @@
+---
+# tasks file for aervits.kerberos-client
+
+#- debug:
+#    msg: debugging tasks
+
+- name: kerberos requires ntp installed
+  include: ntp.yml
+
+- name: set proper timezone
+  include: timezone.yml
+
+- name: starting kerberos provisioning
+  include: kerberos.yml
