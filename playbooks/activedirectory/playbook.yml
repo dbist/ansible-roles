@@ -5,6 +5,7 @@
 # TODO: convert to requirements
     - ../../roles/aervits.jdk
     - ../../roles/aervits.devtools
+    - ../../roles/aervits.kerberos-client
 
 #  - src: https://github.com/dbist/ansible-roles/roles/aervits.kerberos-server
 #    name: aervits.kerberos-server
