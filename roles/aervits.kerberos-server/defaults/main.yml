@@ -1,6 +1,6 @@
 ---
 # defaults file for aervits.kerberos-server
-kerberos_server_hostname: krb.example.com
+kerberos_server_hostname: node.example.com
 realm: EXAMPLE.COM
 master_db_pass: admin
 admin_principal_password: admin
