@@ -3,18 +3,19 @@
 ![ansible-lint](https://github.com/dbist/ansible-roles/workflows/ansible-lint/badge.svg?branch=master)
 ![Super Linter](https://github.com/dbist/ansible-roles/workflows/Super%20Linter/badge.svg)
 
-# ansible-roles
+## ansible-roles
 miscellaneous ansible roles
 install with `ansible-galaxy role install -r requirements.yml`
-```
+
+```bash
 - aervits.kerberos-server (master) is already installed, skipping.
 - extracting aervits.jdk to /Users/artem/.ansible/roles/aervits.jdk
 - aervits.jdk (master) was installed successfully
-
+```
 
 Prerequisites:
 
-```
+```bash
 pre-commit
 vagrant-hostmanager (1.8.9, global)
 vagrant-persistent-storage (0.0.48, global)
@@ -23,10 +24,9 @@ vagrant-vbguest (0.21.0, global)
 ```
 
 Tested with the following:
-```
-ansible                                2.9.7
-ansible-lint                           4.2.0
-```
+
+1. ansible                                2.9.7
+2. ansible-lint                           4.2.0
 
 `pip install ansible ansible-lint`
 
