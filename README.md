@@ -1,4 +1,7 @@
+# Various Ansible Roles
+
 ![ansible-lint](https://github.com/dbist/ansible-roles/workflows/ansible-lint/badge.svg?branch=master)
+![Super Linter](https://github.com/dbist/ansible-roles/workflows/Super%20Linter/badge.svg)
 
 # ansible-roles
 miscellaneous ansible roles
