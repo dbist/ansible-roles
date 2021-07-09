@@ -4,8 +4,9 @@
   roles:
 # TODO: convert to requirements
     - ../../roles/aervits.kerberos-server
-    - ../../roles/aervits.jdk
-    - ../../roles/aervits.devtools
+    - ../../roles/aervits.kerberos-client
+#    - ../../roles/aervits.jdk
+#    - ../../roles/aervits.devtools
 
 #  - src: https://github.com/dbist/ansible-roles/roles/aervits.kerberos-server
 #    name: aervits.kerberos-server
@@ -32,7 +33,7 @@
     args:
       warn: no
 
-   # Example removing a repository and cleaning up metadata cache
+  # Example removing a repository and cleaning up metadata cache
   - name: Remove repository (and clean up left-over metadata)
     yum_repository:
       name: 7.7.1908-base
