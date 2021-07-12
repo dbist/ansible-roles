@@ -8,9 +8,13 @@ admin_principal_password: admin
 prerequisite_packages:
   - ntp
 
-kerberos_packages:
+kerberos_packages_rhel:
   - krb5-server
   - krb5-libs
   - krb5-workstation
+
+kerberos_packages_ubuntu:
+  - krb5-kdc
+  - krb5-admin-server
 
 timezone: America/New_York

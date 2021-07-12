@@ -7,8 +7,17 @@
       state: present
     with_items: "{{ prerequisite_packages }}"
 
-  - name: ensure ntp is enabled and running
+  - name: ensure ntp is enabled and running (RHEL)
     service:
       name: ntpd
       state: started
       enabled: yes
+    when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
+  
+  - name: ensure ntp is enabled and running (Ubuntu)
+    service:
+      name: ntp
+      state: started
+      enabled: yes
+    when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+  

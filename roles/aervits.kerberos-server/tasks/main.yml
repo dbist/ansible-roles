@@ -10,5 +10,11 @@
 - name: set proper timezone
   include: timezone.yml
 
-- name: starting kerberos provisioning
-  include: kerberos.yml
+#- name: starting kerberos provisioning
+#  include: kerberos.yml
+
+- name: Pull os family specific vars
+  include_vars: "{{ ansible_facts.os_family | lower }}.yml"
+
+- name: Run os_family specific tasks
+  include_tasks: "{{ ansible_facts.os_family | lower }}.yml"
