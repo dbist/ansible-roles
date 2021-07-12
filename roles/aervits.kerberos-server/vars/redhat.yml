@@ -1,0 +1,11 @@
+---
+#krb5kdc_dir: /var/kerberos/krb5kdc
+#principal_dir: /var/kerberos/krb5kdc
+krb5_daemons:
+  - krb5kdc
+  - kadmin
+
+kerberos_packages:
+  - krb5-server
+  - krb5-libs
+  - krb5-workstation

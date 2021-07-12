@@ -4,7 +4,7 @@
   roles:
 # TODO: convert to requirements
     - ../../roles/aervits.kerberos-server
-    - ../../roles/aervits.kerberos-client
+#    - ../../roles/aervits.kerberos-client
 #    - ../../roles/aervits.jdk
 #    - ../../roles/aervits.devtools
 
@@ -32,13 +32,17 @@
     command: yum clean metadata
     args:
       warn: no
+    when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
 
   # Example removing a repository and cleaning up metadata cache
   - name: Remove repository (and clean up left-over metadata)
     yum_repository:
       name: 7.7.1908-base
       state: absent
+    when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
     notify: yum-clean-metadata
 
 #  tasks:
 #   - import_tasks: roles/aervits.kerberos-server/tasks/main.yml
+
+### TODO add Ubuntu apt cache clean
