@@ -1,8 +1,8 @@
 ---
 # Variables file 'vars.yml' for aervits.kerberos-server playbook
 
-kerberos-server-hostname:
-  - krb.example.com
+# this is meant to be overridden at playbook level
+kerberos-server-hostname: krb.example.com
 
 packages:
   - wget
