@@ -40,7 +40,11 @@ galaxy_info:
   #   - 25
     - name: Centos
       versions:
-       - 7.6
+       - 7.9
+
+    - name: Ubuntu
+      versions:
+       - 20.04
   #   - all
   #   - 1.0
   #   - 7
