@@ -4,3 +4,8 @@ principal_dir: /var/lib/krb5kdc
 krb5_daemons:
   - krb5-admin-server
   - krb5-kdc
+
+kerberos_packages:
+  - krb5-kdc
+  - krb5-admin-server
+  - krb5-config
