@@ -31,6 +31,7 @@
 #      enabled: yes
 #    loop: "{{ krb5_daemons }}"
 
+#### Fabio
 
   - name: Set kdc.conf
     template:
