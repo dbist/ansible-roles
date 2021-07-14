@@ -12,13 +12,15 @@ kerberos_packages:
 
 krb5_enc_types:
   - aes256-cts
-  - aes128-cts
-  - des3-hmac-sha1
-  - arcfour-hmac
-  - camellia256-cts
-  - camellia128-cts
+
+  # these work but unnecessary
+  #- aes128-cts
+  #- des3-hmac-sha1
+  #- arcfour-hmac
+  #- camellia256-cts
+  #- camellia128-cts
   
-  # not supported
+  # not supported, remove from rhel playbook also
   #- des-cbc-md5
   #- des-hmac-sha1
   #- des-cbc-crc
